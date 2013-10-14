@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Run your App on the Cloud</title>
+<link rel="stylesheet" type="text/css" href="static/widget.css">
+<script type="text/javascript" src="static/js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#start_btn").click(function(){
+		$(this).hide();
+		$("#stop_btn").show();
+		startRun()
+
+	});
+	$("#stop_btn").click(function(){
+		$(this).hide();
+		$("#start_btn").show();
+		
+	});
+
+});
+
+function startRun() {
+	$.ajax({
+		url: "../runner?template=mock",
+		success: getOutput		
+	});
+}
+
+function getOutput() {
+	$.ajax({
+		url: "../progress",
+		success: writeLog
+	});
+}
+
+function writeLog(data){
+	$("#log").append("<li>" + data + "</li>")
+	getOutput()
+}
+</script>
+</head>
+<body>
+	<div id="widget" style="width:400px;height:300px;">
+		<span id="title"></span>
+
+	    <a herf="javascript:void(0)" id="start_btn" class="button" ></a>
+	    <a herf="javascript:void(0)" id="stop_btn" class="button" style="display:none"></a>
+	    <ul id="log"></ul>
+	    <ul id="links">
+	      <li class="mock"><span class="mock_text">Manage Your App</span><a id="cloudify_dashboard_link" href="#" target="_blank">Manage Your App</a></li>
+	      <li class="mock" id="custom_link"><span class="mock_text">MySQL</span></li>
+	    </ul>
+	    <span id="time_left" style="display:none;">Time left: <span id="time_left_counter"></span></span>
+	    <div id="video_container">
+	     
+	          <!--  <object width="270" height="160"><param name="movie" value="http://www.youtube.com/v/6Li_lCZXaKY?version=3&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/6Li_lCZXaKY?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="270" height="160" allowscriptaccess="always" wmode="transparent" allowfullscreen="true"></embed></object> -->
+	        
+	    </div>
+	</div>
+</body>
+</html>
