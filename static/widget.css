@@ -1,0 +1,441 @@
+/* helper classes */
+/* line 4, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+.hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden; }
+
+/* line 14, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+.put_left {
+  float: right; }
+
+/* baseline styles */
+/* line 20, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+body {
+  background: url("img/widget_background.png") no-repeat;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+/* components */
+/* line 27, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+.button {
+  height: 112px;
+  width: 112px;
+  position: absolute;
+  top: 125px;
+  right: 17px; }
+
+/* line 35, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+#stop_btn, #start_btn {
+  position: absolute;
+  left: 467px;
+  top: 139px; }
+
+/* line 41, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+#start_btn {
+  background: url("img/play_button_sprite.png") 0 -336px no-repeat; }
+  /* line 44, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+  #start_btn:hover {
+    background-position: 0 -448px; }
+  /* line 48, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+  #start_btn:active {
+    background-position: 0 0; }
+
+/* line 53, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+#stop_btn {
+  background: url("img/play_button_sprite.png") 0 -112px no-repeat; }
+  /* line 56, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+  #stop_btn:hover {
+    background-position: 0 -560px; }
+  /* line 60, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+  #stop_btn:active {
+    background-position: 0 -224px; }
+
+/* line 65, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+.beta-ribbon {
+  margin-top: -6px;
+  margin-right: -6px;
+  left: 536px;
+  top: 8px;
+  position: absolute; }
+
+/* line 73, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+.button:hover {
+  cursor: pointer; }
+
+/* line 77, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+#patent_pending {
+  font-size: 10px;
+  top: 13px;
+  left: 208px;
+  list-style-type: none;
+  position: absolute;
+  color: black;
+  font-family: "Helvetica Neue"; }
+
+/* line 87, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+#log {
+  font-size: 14px;
+  list-style-type: none;
+  position: absolute;
+  color: white;
+  left: -10px;
+  width: 440px;
+  top: 63px;
+  height: 110px;
+  overflow-y: hidden; }
+
+/* line 99, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+#log li.error {
+  color: #E95625;
+  font-size: 16px;
+  font-weight: bold; }
+
+/* line 105, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+#log li.important {
+  font-size: 16px;
+  font-weight: bold; }
+  /* line 108, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+  #log li.important a {
+    color: #F09927; }
+
+/* selected text - must use separate rule for gecko as the whole rule will be dropped on non-supporting engines */
+/* line 113, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+#log li::-moz-selection,
+#log li a::-moz-selection {
+  background-color: #F09927;
+  color: #FFF; }
+
+/* line 118, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+#log li::selection,
+#log li a::selection {
+  background-color: #F09927;
+  color: #FFF; }
+
+/* line 123, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+#title {
+  color: #F09927;
+  font-size: 28px;
+  font-weight: bold;
+  margin-left: 10px; }
+
+/* line 130, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+#time_left {
+  position: absolute;
+  color: white;
+  top: 199px;
+  left: 332px;
+  font-size: 14px; }
+
+/* line 138, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+#time_left_counter {
+  font-weight: bold; }
+
+/* line 142, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+#links {
+  list-style-type: none;
+  position: absolute;
+  top: 185px;
+  left: -9px;
+  font-size: 14px; }
+  /* line 148, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+  #links a {
+    color: black; }
+  /* line 149, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+  #links li {
+    float: left;
+    margin-right: 9px;
+    background: url("../img/arrow.png") no-repeat left top;
+    background-position-y: 2px;
+    padding: 0px 0px 0px 14px; }
+    /* line 157, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+    #links li.mock .mock_text {
+      display: inline; }
+    /* line 158, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+    #links li.mock a {
+      display: none; }
+    /* line 160, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+    #links li .mock_text {
+      display: none; }
+    /* line 161, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+    #links li a {
+      display: inline; }
+
+/* line 165, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+#footer {
+  font-size: 12px;
+  position: absolute;
+  top: 425px;
+  width: 580px; }
+
+/* line 172, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+.brand_btns {
+  margin-bottom: -6px;
+  margin-right: 8px; }
+
+/* line 178, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+.download-link:before {
+  background-image: url("/public/img/icons/download_arrow.png");
+  display: inline-block;
+  width: 11px;
+  height: 15px;
+  z-index: 10;
+  content: "";
+  background-repeat: no-repeat;
+  position: relative;
+  margin-top: -4px;
+  margin-left: -10px;
+  top: -3px; }
+
+/* line 197, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+#video_container object {
+  position: absolute;
+  left: 20px;
+  top: 252px; }
+/* line 202, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+#video_container object, #video_container embed {
+  height: 160px;
+  width: 270px; }
+
+/* line 209, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+.advanced_section {
+  width: 272px;
+  height: 158px;
+  position: absolute;
+  top: 252px;
+  left: 300px;
+  padding-left: 14px;
+  border-radius: 5px;
+  background-color: #EFEFEF;
+  border: 1px solid #00b4da; }
+  /* line 220, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+  .advanced_section.collapsed {
+    height: 46px;
+    bottom: 177px; }
+    /* line 221, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+    .advanced_section.collapsed .advanced_form {
+      display: none; }
+    /* line 225, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+    .advanced_section.collapsed .advanced_header .advanced_title:before {
+      background: url("/public/img/advanced_bulletin.png") 0 -16px no-repeat; }
+  /* line 232, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+  .advanced_section .remember_creds {
+    display: none; }
+  /* line 236, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+  .advanced_section.should_remember .remember_creds {
+    display: block; }
+  /* line 240, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+  .advanced_section .advanced_header {
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 7px; }
+    /* line 245, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+    .advanced_section .advanced_header .advanced_title {
+      font-size: 17px;
+      color: #00586B;
+      text-decoration: none;
+      cursor: pointer; }
+      /* line 250, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+      .advanced_section .advanced_header .advanced_title:before {
+        content: "";
+        display: inline-block;
+        height: 16px;
+        width: 20px;
+        background: url("/public/img/advanced_bulletin.png") 0 3px no-repeat; }
+  /* line 260, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+  .advanced_section .advanced_form input {
+    width: 250px;
+    height: 22px;
+    margin-bottom: 5px;
+    padding: 0 5px;
+    border-radius: 5px; }
+  /* line 269, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+  .advanced_section #pemFileLink {
+    float: right;
+    display: none;
+    bottom: 195px;
+    margin-right: 12px;
+    z-index: 10;
+    background-color: #87CEFA;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 4px 4px 4px 12px;
+    font-size: 10px;
+    font-weight: bold; }
+
+/* line 286, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+#advanced form input {
+  position: absolute;
+  height: 21px;
+  width: 220px;
+  border: 0px none white;
+  box-shadow: none; }
+
+/* line 295, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+#advanced {
+  background-image: url("/img/advanced_form.png");
+  width: 272px;
+  height: 158px;
+  position: absolute;
+  bottom: 65px;
+  right: 20px; }
+
+/* line 304, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+#show_advanced {
+  position: absolute;
+  bottom: 178px;
+  right: 20px; }
+
+/* line 310, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+#advanced form input:-webkit-input-placeholder {
+  color: #999; }
+
+/* line 313, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+#advanced form input:-moz-placeholder {
+  color: #999; }
+
+/* line 316, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+#advanced form input:-ms-input-placeholder {
+  color: #999; }
+
+/* line 321, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+#advanced form input:focus {
+  outline: none; }
+
+/* line 325, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+#advanced form input[name="hpcs_key"] {
+  top: 50px;
+  left: 15px; }
+
+/* line 330, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+#advanced form input[name="hpcs_secret_key"] {
+  top: 96px;
+  left: 15px; }
+
+/* line 336, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+#walkthrough {
+  position: absolute;
+  background: url("/public/img/demo/walkthrough.png") -10px -15px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+  /* line 345, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+  #walkthrough.no_link {
+    background: url("/public/img/demo/walkthrough-no-link.png") -10px -15px; }
+  /* line 349, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+  #walkthrough a {
+    color: white;
+    position: absolute;
+    left: 10px;
+    top: 10px; }
+
+/* line 358, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+.form-footer-links {
+  float: right;
+  margin-right: 5px;
+  font-size: 12px; }
+  /* line 362, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+  .form-footer-links a {
+    position: relative;
+    color: #046c9f;
+    text-decoration: none;
+    border-bottom: 1px dashed; }
+    /* line 367, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+    .form-footer-links a:hover {
+      border-bottom-style: solid; }
+      /* line 369, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+      .form-footer-links a:hover:after {
+        content: 'If you\2019re an HP Cloud Services User, Use the Api Keys in the HP Cloud Console to get the cloud credentials. The screen shot below outlines the properties you need retrieve from the HPCS console:';
+        position: absolute;
+        bottom: 15px;
+        right: 0;
+        display: block;
+        width: 350px;
+        height: 310px;
+        border: 1px solid #00b4da;
+        padding: 12px;
+        background: #e6e6e6 url("/img/demo/hp-tooltip.jpg") 50% 100% no-repeat;
+        color: #213540;
+        box-shadow: 1px 1px 7px #777777; }
+
+/* line 387, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+.log-ellipsis {
+  display: none; }
+  /* line 389, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+  .log-ellipsis:last-child {
+    display: list-item; }
+
+/* line 395, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+.remember_creds {
+  z-index: 2;
+  background: #ECECEC;
+  position: absolute;
+  height: 154px;
+  width: 280px;
+  margin-left: -12px;
+  margin-top: 2px; }
+  /* line 404, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+  .remember_creds .remember_me_title {
+    margin: auto;
+    border-bottom: 1px solid;
+    width: 160px;
+    padding-top: 10px;
+    text-align: center; }
+  /* line 412, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+  .remember_creds .remember_option {
+    text-align: center;
+    margin-top: 10px; }
+    /* line 414, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+    .remember_creds .remember_option button {
+      height: 35px;
+      width: 133px; }
+
+/* line 423, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+#embed_btn {
+  cursor: pointer; }
+
+/* line 426, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+#embed-code-box {
+  position: absolute;
+  bottom: 40px;
+  right: 107px;
+  width: 440px;
+  height: 190px;
+  padding: 8px 12px 12px;
+  overflow: hidden;
+  font-size: .9em;
+  border: 1px solid #777777;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  box-shadow: 2px 1px 12px #555555; }
+  /* line 440, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+  #embed-code-box h3, #embed-code-box p {
+    margin: 0;
+    padding: 3px 0;
+    text-align: center;
+    line-height: 1.2; }
+  /* line 446, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+  #embed-code-box p {
+    padding-bottom: 8px; }
+  /* line 449, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+  #embed-code-box textarea {
+    width: 416px;
+    height: 128px;
+    padding: 5px 12px;
+    background-color: #333;
+    color: #eee; }
+  /* line 457, /root/play-2.0.4/cloudify-widget/app/assets/cloudify/style/widget.scss */
+  #embed-code-box .close {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 29px;
+    height: 29px;
+    background: url("/img/icons/close-button.png") 50% 50% no-repeat;
+    cursor: pointer; }
